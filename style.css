@@ -1,0 +1,102 @@
+/* ===== GENERAL ===== */
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #0a0a0a;
+  margin: 0;
+  padding: 0;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* ===== NAVBAR ===== */
+
+.navbar {
+  background-color: #000 !important;
+  border-bottom: 2px solid #ff00aa;
+}
+
+.glow-text {
+  color: #ff4fd8;
+  text-shadow: 0 0 10px #ff00aa;
+  letter-spacing: 2px;
+}
+
+.elchamo-icon {
+  height: 40px;
+  width: auto;
+  border-radius: 8px;
+}
+
+/* ===== SECCIÓN PRINCIPAL (FONDO SUBMARINE) ===== */
+
+.dark-letter {
+  min-height: 100vh;
+  background-image: url("ayuda.jpg"); /* tu portada */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 60px 0;
+}
+
+/* Capa oscura encima del fondo */
+.dark-letter::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0.75)
+  );
+  backdrop-filter: blur(3px); /* efecto más cinematográfico */
+}
+
+/* Mantiene el contenido encima del overlay */
+.dark-letter .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* ===== TÍTULO ===== */
+
+.glow-title {
+  color: #ffffff;
+  font-weight: 800;
+  text-shadow: 0 0 15px rgba(255, 0, 170, 0.8);
+  letter-spacing: 3px;
+  margin-bottom: 40px;
+}
+
+/* ===== IMAGEN CENTRADA ===== */
+
+.imagen-vertical {
+  max-height: 70vh;
+  width: auto;
+  border-radius: 16px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.9);
+  transition: all 0.4s ease;
+}
+
+.imagen-vertical:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 50px rgba(255, 0, 170, 0.4);
+}
+
+.kuromi-footer {
+  background: linear-gradient(to top, #000000, #140018);
+  border-top: 2px solid #ff00aa;
+  color: #f5c6ff;
+  padding: 10px 0;   /* antes 25px */
+}
+
+.kuromi-title {
+  font-weight: 600;
+  font-size: 14px;   /* más pequeño */
+  color: #ff4fd8;
+  text-shadow: 0 0 6px #ff00aa;
+  letter-spacing: 1px;
+  margin: 0;         /* elimina espacio extra */
+}
