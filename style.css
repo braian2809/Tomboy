@@ -1,5 +1,3 @@
-/* ===== GENERAL ===== */
-
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #0a0a0a;
@@ -9,7 +7,6 @@ body {
   overflow-x: hidden;
 }
 
-/* ===== NAVBAR ===== */
 
 .navbar {
   background-color: #000 !important;
@@ -28,11 +25,10 @@ body {
   border-radius: 8px;
 }
 
-/* ===== SECCIÓN PRINCIPAL (FONDO SUBMARINE) ===== */
 
 .dark-letter {
   min-height: 100vh;
-  background-image: url("ayuda.jpg"); /* tu portada */
+  background-image: url("ayuda.jpg"); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -42,7 +38,7 @@ body {
   padding: 60px 0;
 }
 
-/* Capa oscura encima del fondo */
+
 .dark-letter::before {
   content: "";
   position: absolute;
@@ -51,16 +47,16 @@ body {
     rgba(0, 0, 0, 0.75),
     rgba(0, 0, 0, 0.75)
   );
-  backdrop-filter: blur(3px); /* efecto más cinematográfico */
+  backdrop-filter: blur(3px); 
 }
 
-/* Mantiene el contenido encima del overlay */
+
 .dark-letter .container {
   position: relative;
   z-index: 2;
 }
 
-/* ===== TÍTULO ===== */
+
 
 .glow-title {
   color: #ffffff;
@@ -70,7 +66,6 @@ body {
   margin-bottom: 40px;
 }
 
-/* ===== IMAGEN CENTRADA ===== */
 
 .imagen-vertical {
   max-height: 70vh;
@@ -89,14 +84,80 @@ body {
   background: linear-gradient(to top, #000000, #140018);
   border-top: 2px solid #ff00aa;
   color: #f5c6ff;
-  padding: 10px 0;   /* antes 25px */
+  padding: 10px 0;   
 }
 
 .kuromi-title {
   font-weight: 600;
-  font-size: 14px;   /* más pequeño */
+  font-size: 14px;   
   color: #ff4fd8;
   text-shadow: 0 0 6px #ff00aa;
   letter-spacing: 1px;
-  margin: 0;         /* elimina espacio extra */
+  margin: 0;         
+}
+
+.carousel-video {
+  width: 70%;
+  max-height: 500px;
+  border-radius: 20px;
+}
+
+.carousel-img {
+  width: 70%;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.carousel-item {
+  position: relative;
+}
+
+.collage-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  pointer-events: none; 
+  z-index: 10;
+}
+
+.badge-culpable {
+  background: rgba(255, 0, 170, 0.8);
+  color: white;
+  font-weight: bold;
+  padding: 8px 25px;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  box-shadow: 0 0 20px #ff00aa;
+  border: 2px solid white;
+  animation: parpadeo-culpable 2s infinite;
+  backdrop-filter: blur(5px);
+  font-family: 'Courier New', monospace;
+  display: inline-block;
+}
+
+@keyframes parpadeo-culpable {
+  0%, 100% { 
+    background: rgba(255, 0, 170, 0.8);
+    box-shadow: 0 0 20px #ff00aa;
+  }
+  50% { 
+    background: rgba(255, 0, 100, 0.9);
+    box-shadow: 0 0 40px #ff3366;
+  }
+}
+
+
+.carousel-img {
+  width: auto; 
+  max-width: 100%; 
+  max-height: 500px;
+  object-fit: contain;
+  border-radius: 20px;
+  margin: 0 auto; 
+  display: block;
 }
